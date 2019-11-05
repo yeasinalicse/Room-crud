@@ -9,16 +9,35 @@ public class Product {
     @PrimaryKey(autoGenerate = true)
     private int id;
 
-    private String title;
+    private String name;
+    private String price;
 
     private String description;
+    private String image;
 
     private int priority;
 
-    public Product(String title, String description, int priority) {
-        this.title = title;
+    public Product(String name, String description, int priority) {
+        this.name = name;
         this.description = description;
         this.priority = priority;
+    }
+
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public int getId() {
@@ -29,12 +48,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {

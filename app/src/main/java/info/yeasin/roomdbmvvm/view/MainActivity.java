@@ -26,12 +26,13 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView  = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-
         ProductAdapter productAdapter = new ProductAdapter();
         recyclerView.setAdapter(productAdapter);
 
         productViewModel = ViewModelProviders.of(this).get(ProductViewModel.class);
-        productViewModel.deleteAll();
+
+        productViewModel.insert(new Product("title","descrition",1));
+
 
         productViewModel.getAllProduct().observe(this, new Observer<List<Product>>() {
             @Override

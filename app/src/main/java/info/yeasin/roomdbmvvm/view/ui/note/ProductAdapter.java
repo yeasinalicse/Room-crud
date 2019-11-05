@@ -26,7 +26,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.NoteHold
     @Override
     public void onBindViewHolder(@NonNull NoteHolder holder, int position) {
         Product currentProduct = products.get(position);
-        holder.textViewTitle.setText(currentProduct.getTitle());
+        holder.textViewTitle.setText(currentProduct.getName());
         holder.textViewDescription.setText(""+ currentProduct.getPriority());
 
     }
